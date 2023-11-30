@@ -1,0 +1,459 @@
+body {
+    font-family: 'Arial';
+    min-width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+option {
+    padding: 10px 0;
+}
+
+hr {
+    margin-top: 158px;
+    background-color: rgb(158, 158, 158);
+}
+
+.subnav {
+    visibility: hidden;
+    right: 80px;
+    position: absolute;
+    width: 400px;
+    padding: 0;
+    margin-top: 0;
+    border: 1px solid #949494;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 20%);
+}
+
+.historyInfor {
+    font-size: 1.0rem;
+}
+
+.timeInfor {
+    right: 0;
+    color: #797878;
+}
+
+.timeInfor {
+    font-size: 15px;
+}
+
+#mainbody {
+    width: 80%;
+    height: auto;
+    border: 5px solid #000;
+    border-radius: 20px;
+}
+
+.subnav li {
+    border-bottom: none;
+    margin: 0;
+
+    justify-content: space-between;
+    padding: 15px 15px;
+    display: flex;
+}
+
+.subnav li:hover {
+    background-color: #52515127;
+    cursor: pointer;
+}
+
+#header-button .button:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+#header-button .buttonMenu:hover .subnav {
+    visibility: visible;
+}
+
+#header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(168, 214, 150, 1);
+}
+
+#header-button {
+    display: flex;
+    margin: 5px 10px 0 0;
+}
+
+#header-button .button {
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+#header-logo {
+    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    color: #406E38;
+    font-weight: bold;
+    font-size: 2.8rem;
+    max-width: 400px;
+}
+
+.bodyitem-title {
+    margin: 48px 0;
+    font-weight: 700;
+    font-size: 2.6rem;
+}
+
+#bodyApp {
+    display: flex;
+}
+
+#bodyApp .bodyitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 64px;
+}
+
+.bodyitem .bodyitem-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    background-color: rgba(217, 217, 217, 0.5);
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+}
+
+#Note {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 64px 0;
+    font-size: 1rem;
+}
+
+#DoorbuttonArea {
+    overflow-y: scroll;
+}
+
+.listButton {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 39px;
+    margin-bottom: 10px;
+}
+
+.buttontitle {
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-style: italic;
+    padding: 10px 0;
+}
+
+.bodyButton {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idDoor {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.deleteButton {
+    float: right;
+
+
+}
+
+.iconDelete {
+    width: 24px;
+    height: 24px;
+    margin-top: 58px;
+}
+
+ol li {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    border-top: 1px solid rgb(158, 158, 158);
+    text-align: center;
+    margin: 8px 28px;
+}
+
+ol li:first-child {
+    border: none;
+}
+
+ol {
+    margin: 0;
+    width: 100%;
+    padding-inline-start: 0px;
+}
+
+.switch {
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 68px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.deleteButton,
+.switch:hover {
+    cursor: pointer;
+}
+
+.switch input {
+    display: none
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #949494;
+    border-radius: 50px;
+}
+
+.status {
+    color: whitesmoke;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    top: 10px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 52px;
+    width: 52px;
+    left: 8px;
+    bottom: 8px;
+    background-color: whitesmoke;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+.status:nth-child(1) {
+    display: none;
+    left: 15px;
+}
+
+.status:nth-child(2) {
+    right: 15px;
+}
+
+input:checked+.slider .status:nth-child(1) {
+    display: block;
+}
+
+input:checked+.slider .status:nth-child(2) {
+    display: none;
+}
+
+input:checked+.slider {
+    background-color: #589E3F;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(82px);
+    -ms-transform: translateX(82px);
+    transform: translateX(82px);
+}
+
+#enterInfor {
+    margin: 32px 16px;
+    width: 80%;
+}
+
+.titleInfor {
+    font-size: 1.2rem;
+    display: block;
+    margin: 10px 0;
+}
+
+.itemInfor {
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.InputInfor {
+    width: 98%;
+    border-radius: 5px;
+    border: 1px solid rgb(148, 148, 148);
+    font-size: 1rem;
+    height: 38px;
+    padding: 0 4px;
+}
+
+select.InputInfor {
+    width: 100%;
+    height: 40px;
+}
+
+.enterinfor-button {
+    min-width: 24%;
+    margin: 32px;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-color: #406E38;
+}
+
+.enterinfor-button:hover {
+    cursor: pointer;
+}
+
+.enterinfor-button:active {
+    background: #406E38;
+
+}
+
+@media (max-width: 820px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #header {
+        height: 54px;
+        z-index: 2;
+        position: fixed;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    #header-logo {
+        font-size: 25px;
+    }
+
+    #header-button .button {
+        width: 22px;
+        height: 22px;
+        padding: 16px 12px;
+    }
+
+    .subnav {
+        top: 54px;
+        right: 2px;
+        width: 99%;
+        margin: 0;
+    }
+
+    .historyInfor {
+        font-size: 15px;
+    }
+
+    #bodyApp {
+        display: inline-block;
+        width: 100%;
+        margin-top: 54px;
+    }
+
+    ol li {
+        margin: 0 14px 4px 14px;
+    }
+
+    #bodyApp .bodyitem {
+        width: 100%;
+        margin: 0;
+    }
+
+    .buttontitle {
+        font-size: 1.1rem;
+    }
+
+    .bodyitem .bodyitem-app {
+        width: 80%;
+        height: 380px;
+    }
+
+    .bodyitem-title {
+        padding: 24px 0;
+        margin: 0px;
+        font-size: 1.6rem;
+    }
+
+    .idDoor {
+        font-size: 1.1rem;
+    }
+
+    .switch {
+        width: 120px;
+        height: 54px;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .slider:before {
+        height: 42px;
+        width: 42px;
+        left: 8px;
+        bottom: 6px;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(62px);
+        -ms-transform: translateX(62px);
+        transform: translateX(62px);
+    }
+
+    .status {
+        top: 8px;
+        font-size: 0.8rem;
+    }
+
+    .status:nth-child(1) {
+        display: none;
+        left: 14px;
+    }
+
+    .status:nth-child(2) {
+        right: 14px;
+    }
+
+    .titleInfor {
+        font-size: 1rem;
+    }
+
+    #enterInfor {
+        margin: 16px;
+        width: 90%;
+    }
+
+    .InputInfor {
+        width: 96%;
+    }
+
+    .enterinfor-button {
+        font-size: 0.8rem;
+        padding: 12px 16px;
+    }
+
+    .hritem {
+        margin-top: 46px;
+        width: 80%;
+    }
+
+    #Note {
+        font-size: 0.8rem;
+        padding: 24px 0;
+    }
+}
